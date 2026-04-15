@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* HEADER LOGO */
+header img {
+    width: 70px;
+    height: auto;
+}
+
+/* 🔥 LOGIN PAGE LOGO FIX (IMPORTANT) */
+.top img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* GLOBAL IMAGE CONTROL */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+/* TEMPLATE */
+.templates {
+    text-align: center;
+    padding: 60px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.premium {
+    border: 2px solid gold;
+}
+
+/* 🔥 WELCOME BOX */
+.welcome-box {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-box h2 {
+    font-size: 28px;
+    color: #00ffd5;
+    text-shadow: 0 0 10px #00ffd5;
+}
+
+/* 🔥 TYPING EFFECT */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #00ffd5;
+    width: 0;
+    animation: typing 2s steps(20, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* FADE */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔥 MODERN BUTTON DESIGN */
+button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.7);
+}
+
+/* CLICK EFFECT */
+button:active {
+    transform: scale(0.95);
+}
+
+/* PREMIUM BUTTON */
+.premium button {
+    background: linear-gradient(135deg, gold, orange);
+    color: black;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* HERO BUTTON SPECIAL */
+.hero button {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+/* 🌌 BACKGROUND */
+.space-bg {
+    height: 100vh;
+    background: radial-gradient(circle at top, #1b2735, #090a0f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* ✨ GLASS BOX */
+.glass-box {
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,255,255,0.2);
+}
+
+/* INPUT */
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 15px 0;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* LOGIN BUTTON */
+.otp-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* TEXT */
+.info {
+    margin-top: 15px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.signup span {
+    color: #00ffd5;
+    cursor: pointer;
+}
+/* 🔥 STEP WIZARD UI */
+
+.wizard-box {
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,255,255,0.2);
+}
+
+/* PROGRESS */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#progress {
+    height: 100%;
+    width: 25%;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* STEPS */
+.step {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.step.active {
+    display: block;
+}
+
+/* INPUT */
+.step input,
+.step textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* BUTTON GROUP */
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* BUTTON */
+.step button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    cursor: pointer;
+}
+/* 🔥 PREMIUM RESUME */
+
+.resume-container {
+    width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+}
+
+/* HEADER */
+.resume-header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #00c6ff, #00ff95);
+    padding: 20px;
+    color: black;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* BODY */
+.resume-body {
+    display: flex;
+}
+
+/* LEFT */
+.left {
+    width: 30%;
+    padding: 15px;
+    background: #f5f5f5;
+}
+
+/* RIGHT */
+.right {
+    width: 70%;
+    padding: 15px;
+}
+
+/* HEADINGS */
+h3 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
