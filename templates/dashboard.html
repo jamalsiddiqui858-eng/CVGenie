@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="space-bg">
+
+<div class="glass-box">
+    <h1>Welcome 🚀</h1>
+    
+    <!-- USER EMAIL -->
+    <h2>{{ user }}</h2>
+
+    <p>You are logged in successfully</p>
+
+    <a href="/"><button class="otp-btn">Go Home</button></a>
+</div>
+
+</body>
+</html>

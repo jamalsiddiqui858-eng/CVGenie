@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - CVGenie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="space-bg">
+
+<div class="glass-box">
+
+    <h1>Sign Up</h1>
+
+    <form action="/send-otp" method="POST">
+        <div class="input-field">
+            <input type="text" name="email" placeholder="Enter Email or Phone" required>
+        </div>
+
+        <button class="otp-btn">Send OTP</button>
+    </form>
+
+    <p class="info">OTP will be sent to your email</p>
+
+    <p class="signup">
+        Already have an account? <a href="/login"><span>Login →</span></a>
+    </p>
+
+</div>
+
+</body>
+</html>

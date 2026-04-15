@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premium Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body style="background:#eee;">
+
+<div class="resume-container">
+
+    <!-- HEADER -->
+    <div class="resume-header">
+
+        {% if photo %}
+        <img src="{{ url_for('static', filename='uploads/' + photo) }}" class="profile-img">
+        {% endif %}
+
+        <div>
+            <h1>{{ name }}</h1>
+            <p>{{ email }} | {{ mobile }}</p>
+        </div>
+    </div>
+
+    <div class="resume-body">
+
+        <!-- LEFT SIDE -->
+        <div class="left">
+            <h3>Skills</h3>
+            <p>{{ skills }}</p>
+
+            <h3>Extra</h3>
+            <p>{{ extra }}</p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right">
+            <h3>Profile</h3>
+            <p>{{ result }}</p>
+
+            <h3>Experience</h3>
+            <p>{{ experience }}</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="space-bg">
+
+<div class="wizard-box">
+
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <form id="form" action="/generate" method="POST">
+
+        <!-- STEP 1 -->
+<div class="step active">
+    <h2>Your Basic Details 👤</h2>
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <input type="text" name="mobile" placeholder="Mobile Number">
+
+    <input type="text" name="other" placeholder="Other (Optional)">
+
+    <button type="button" onclick="nextStep()">Next →</button>
+</div>
+
+        <!-- STEP 2 -->
+        <div class="step">
+            <h2>Your Skills 🛠</h2>
+            <textarea name="skills" placeholder="Python, HTML, Excel"></textarea>
+            <div class="btns">
+                <button type="button" onclick="prevStep()">← Back</button>
+                <button type="button" onclick="nextStep()">Next →</button>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step">
+            <h2>Your Experience 💼</h2>
+            <textarea name="experience" placeholder="Intern at XYZ"></textarea>
+            <div class="btns">
+                <button type="button" onclick="prevStep()">← Back</button>
+                <button type="button" onclick="nextStep()">Next →</button>
+            </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step">
+            <h2>Extra (Optional) 🎓</h2>
+            <textarea name="extra" placeholder="Courses, Certificates"></textarea>
+            <div class="btns">
+                <button type="button" onclick="prevStep()">← Back</button>
+                <button type="submit">🚀 Generate Resume</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+let current = 0;
+const steps = document.querySelectorAll(".step");
+const progress = document.getElementById("progress");
+
+function showStep(i){
+    steps.forEach(s => s.classList.remove("active"));
+    steps[i].classList.add("active");
+    progress.style.width = ((i+1)/steps.length)*100 + "%";
+}
+
+function nextStep(){
+    if(current < steps.length-1){
+        current++;
+        showStep(current);
+    }
+}
+
+function prevStep(){
+    if(current > 0){
+        current--;
+        showStep(current);
+    }
+}
+</script>
+
+</body>
+</html>
