@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CVGenie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="logo" style="display:flex; align-items:center; gap:10px;">
+        <img src="{{ url_for('static', filename='images/logo.png') }}">
+        <h2 style="margin:0;">CVGenie</h2>
+    </div>
+
+    <nav style="display:flex; align-items:center; gap:25px;">
+        <a href="/">Home</a>
+
+        {% if user %}
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+    </nav>
+</header>
+
+{% if user %}
+<div class="welcome-box">
+    <h2 class="typing">Hi 👋 {{ user }}</h2>
+    <h3>Welcome to CVGenie 🚀</h3>
+    <p>Build your dream resume 💼</p>
+</div>
+{% endif %}
+
+<section class="hero">
+    <h1>AI Resume Generator</h1>
+    <p>Build Your Resume in Minutes</p>
+    <a href="/free"><button>Get Started</button></a>
+</section>
+
+<section class="templates">
+    <h2>Choose Your Resume Template</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Free Resume</h3>
+            <p>Simple & Clean Design</p>
+            <a href="/free"><button>Create Free</button></a>
+        </div>
+
+        <div class="card premium">
+            <h3>Premium Resume ₹7</h3>
+            <p>Modern & Professional</p>
+            <a href="/premium"><button>Get Premium</button></a>
+        </div>
+    </div>
+</section>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("login") === "success") {
+        alert("Login Successful 🚀");
+    }
+</script>
+
+</body>
+</html>
